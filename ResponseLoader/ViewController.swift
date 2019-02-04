@@ -15,6 +15,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func showLoader(_ sender: UIBarButtonItem) {
+        ProgressView.shared.showActivity(self.view, "Loading Data")
+    }
+    @IBAction func removeLoader(_ sender: UIBarButtonItem) {
+        ProgressView.shared.removeActivity(self.view)
+    }
+    
 }
 
